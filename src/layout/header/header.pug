@@ -1,6 +1,6 @@
 header.header
   .container
-    .header__content
+    .header__wrapper
       nav.header__nav
         ul.header__list
           li.header__item
@@ -11,3 +11,24 @@ header.header
             a(href="#").header__link about us
           li.header__item
             a(href="#").header__link contact
+
+    .header__content
+      .header__left
+        h1.header__title our strong
+          br
+          span.header__spacing organaisation
+        p.header__text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eius-
+          br
+          | mod tempor incididunt  ut labore et. ectetur adig ipis cing elit, sed do
+          br
+          | eiusmod tempor incididunt.
+        a(href="#").header__button Contact Us
+      .header__right
+        .header__video
+          video(width="100%" height="100%")
+            source(src="./images/video.mp4" type='video/mp4')
+
+          .header__play
+
+
+
