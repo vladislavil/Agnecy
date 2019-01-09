@@ -5,6 +5,8 @@ import AppReact from './App.jsx';
 import './index.sass';
 import './index.pug';
 import './services'
+import './products'
+import './team'
 
 import './test-scss.scss';
 export default () => {

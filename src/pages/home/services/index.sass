@@ -2,12 +2,14 @@
 
   &__content
     display: flex
-    padding: 100px 0 50px
+    padding: 100px 0 57px
     border-bottom: 2px solid #ececec
 
   &__title
-    //font-family: "Open Sans Bold"
+    margin-bottom: 31px
+    font-family: $font-family-bold
     font-size: 42px
+    line-height: 58px
     font-weight: $font-weight-bold
     text-transform: uppercase
 
@@ -16,6 +18,8 @@
     width: 50%
 
   &__text
+    width: 515px
+    margin-bottom: 51px
     font-size: 16px
     line-height: 28px
 
@@ -23,14 +27,42 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    padding-left: 16px
+
 
   &__item
-    margin-bottom: 45px
+    width: 286px
+    margin-bottom: 44px
 
   &__subtitle
+    margin-bottom: 7px
     font-size: 24px
-    //font-family: "Open Sans Semibold"
+    font-family: $font-family-semibold
     text-transform: capitalize
 
   &__description
-    width: 251px
+    color: #737373
+    font-size: 16px
+    line-height:  28px
+
+  &__img
+    margin-bottom: 28px
+
+  &__button
+    display: block
+    width: 225px
+    padding: 13px 0
+    color: #ff2d2d
+    background-color: #ffffff
+    border: 1px solid #ff2d2d
+    border-radius: 5px
+    font-size: 18px
+    text-align: center
+    font-weight: $font-weight-bold
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s
+    letter-spacing: 1px
+
+    &:hover,
+    &:focus
+      color: #ffffff
+      background-color: #ff2d2d
