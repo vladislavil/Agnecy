@@ -7,6 +7,8 @@ import './index.pug';
 import './services'
 import './products'
 import './team'
+import './subscribe'
+import './feedback'
 
 import './test-scss.scss';
 export default () => {
