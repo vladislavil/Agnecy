@@ -1,10 +1,21 @@
 .feedback
+  position: relative
+  display: flex
+  height: 1020px
 
   &__title
+    margin-bottom: 31px
+    font-size: 42px
+    font-weight: $font-weight-bold
+    text-transform: uppercase
 
   &__text
+    max-width: 740px
+    color: #737373
     position: relative
-    padding-bottom: 31px
+    margin-bottom: 77px
+    padding-bottom: 62px
+    font-size: 16px
 
     &::before
       content: ""
@@ -14,3 +25,95 @@
       height: 2px
       width: 130px
       background-color: #ff3b3b
+
+  &__left
+    width: 58.7%
+
+  &__right
+    width: 41.3%
+
+  &__input
+    padding: 21px 55px
+    background-color: #e5e5e5
+    font-family: $font-family-base
+    font-size: 18px
+    border: none
+    border-radius: 10px
+    flex-grow: 1
+    flex-shrink: 0
+    outline: none
+    width: 46.5%
+
+    &:first-child
+      margin-right: 50px
+
+    &::placeholder
+      font-family: $font-family-base
+      font-size: 18px
+
+  &__part
+    margin-bottom: 48px
+
+  &__part--inline
+    display: flex
+    justify-content: space-between
+    width: 734px
+
+  &__part--margin
+    margin-bottom: 38px
+
+  &__textarea
+    background-color: #e5e5e5
+    width:  734px
+    height: 250px
+    padding: 30px 55px 0
+    font-family: $font-family-base
+    font-size: 18px
+    outline: none
+    resize: none
+    border: none
+    border-radius: 10px
+
+    &::placeholder
+      font-family: $font-family-base
+      font-size: 18px
+
+  &__button
+    width: 734px
+    height: 72px
+    color: #ffffff
+    background-color: #ff2d2d
+    border: 1px solid transparent
+    border-radius: 10px
+    font-size: 18px
+    text-align: center
+    font-weight: $font-weight-bold
+    text-transform: uppercase
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s
+    letter-spacing: 1px
+    cursor: pointer
+
+    &:hover,
+    &:focus
+      color: #ff2d2d
+      background-color: #ffffff
+      border-color: #ff2d2d
+
+  &__content
+    padding-top: 69px
+    padding-bottom: 110px
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    max-width: 1250px
+    height: 100%
+    margin: 0 auto
+
+  &__wrapper
+    display: flex
+    align-items: center
+    height: 100%
+
+
+
