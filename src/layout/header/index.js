@@ -45,7 +45,7 @@ export default () => {
   $(window).on('load resize',windowSize);
 
   function windowSize(){
-    if ($(window).width() > 767 ){
+    if ($(window).width() > 639 ){
       if($bannerNav.hasClass('menu-opened')){
         $bannerNav.toggleClass('menu-opened');
         $('body').toggleClass('noscroll');
