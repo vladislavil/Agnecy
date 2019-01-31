@@ -14,15 +14,28 @@
     align-items: center
     height: 100%
 
+    +max-w($mobile_md)
+      flex-direction: column
+      justify-content: center
+
   &__list
     display: flex
 
   &__item
     margin-right: 18px
 
+    +max-w($mobile_md)
+      margin-right: 10px
+
   &__copyright
     color: #b1b1b1
     font-size: 16px
+
+    +max-w($mobile_md)
+      margin-bottom: 15px
+
+    +max-w($mobile_sm)
+      font-size: 14px
 
   &__link
     display: block

@@ -2,6 +2,11 @@ import './header.sass';
 
 export default () => {
 
+  var bannerNav = $('.header .header__wrapper');
+  var $bannerNav = $(bannerNav);
+  var menu =  $('.header .header__menu');
+  var $menu = $(menu);
+
   var controls = {
     video: $('.header__video video'),
     playpause: $('.header__play')
@@ -27,6 +32,26 @@ export default () => {
       $(controls.playpause).show();
       video.pause();
       $(video).attr("controls", null);
+    }
+  }
+
+  $menu.on("click", function () {
+    $(this).toggleClass("change");
+    $bannerNav.toggleClass('menu-opened');
+    $('body').toggleClass('noscroll');
+    $('html').toggleClass('noscroll');
+  });
+
+  $(window).on('load resize',windowSize);
+
+  function windowSize(){
+    if ($(window).width() > 767 ){
+      if($bannerNav.hasClass('menu-opened')){
+        $bannerNav.toggleClass('menu-opened');
+        $('body').toggleClass('noscroll');
+        $('html').toggleClass('noscroll');
+        $menu.toggleClass('change');
+      }
     }
   }
 };
