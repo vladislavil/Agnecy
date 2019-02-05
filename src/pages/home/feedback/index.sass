@@ -17,14 +17,17 @@
     padding-bottom: 62px
     font-size: 16px
 
-    &::before
-      content: ""
+    &::after
+      content: url(line.png)
       position: absolute
-      bottom: 0
+      top: 0
       left: 0
-      height: 2px
-      width: 130px
-      background-color: #ff3b3b
+      height: 100%
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      line-height: 0
 
   &__left
     width: 58.7%

@@ -15,7 +15,11 @@
       height: 100%
       z-index: 1
       padding-top: 0
-      background-color: #f6f2f2
+      background: #f6f2f2 /* Old browsers */
+      background: -moz-linear-gradient(left, #f6f2f2 0%, #efd5d5 52%, #efd5d5 52%, #efd5d5 52%, #efd5d5 52%, #efd5d5 52%, #efd5d5 52%, #efd5d5 52%, #f6f2f2 100%) /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #f6f2f2 0%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#f6f2f2 100%) /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #f6f2f2 0%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#efd5d5 52%,#f6f2f2 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f2f2', endColorstr='#f6f2f2',GradientType=1 ) /* IE6-9 */
       transform: translateY(-100%)
       transition: transform 0.5s
 
@@ -106,8 +110,7 @@
     padding: 90px 0 120px
 
     +max-w(1250)
-      padding-left: 20px
-      padding-right: 20px
+      padding: 90px 20px 120px
 
     +max-w($mobile_lg)
       flex-direction: column
@@ -205,6 +208,9 @@
 
     +max-w($mobile_sm)
       width: 100%
+      padding: 10px 0
+      border-radius: 5px
+      font-size: 15px
 
     &:hover,
     &:focus
