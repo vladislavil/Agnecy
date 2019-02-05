@@ -3,6 +3,12 @@
   &__content
     padding: 90px 0
 
+    +max-w(1250)
+      padding: 90px 20px
+
+    +max-w($tablet)
+      padding: 40px 20px
+
   &__title
     margin-bottom: 13px
     text-align: center
@@ -10,34 +16,79 @@
     font-size: 42px
     text-transform: uppercase
 
+    +max-w($tablet)
+      font-size: 34px
+      line-height: 30px
+      margin-bottom: 20px
+
+    +max-w($mobile_lg)
+      font-size: 30px
+
+    +max-w($mobile_md)
+      font-size: 26px
+
   &__text
     position: relative
+    max-width: 480px
     padding-bottom: 27px
-    margin-bottom: 80px
+    margin: 0 auto 80px
     color: #737373
     font-size: 16px
     line-height: 28px
     text-align: center
 
+    +max-w($laptop_sm)
+      margin: 0 auto 51px
+      text-align: center
+
+    +max-w($tablet)
+      margin: 0 auto 25px
+      font-size: 14px
+      line-height: 24px
+
+    +max-w($mobile_lg)
+      padding-bottom: 15px
+      margin: 0 auto 20px
+
     &::after
-      content: ""
+      content: url(line.png)
       position: absolute
-      bottom: 0
-      left: 558px
-      height: 2px
-      width: 130px
-      background-color: #ff3b3b
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      line-height: 0
 
   &__menu
     display: flex
     justify-content: center
     margin-bottom: 60px
 
+    +max-w($tablet)
+      margin-bottom: 30px
+
+    +max-w($mobile_md)
+      flex-direction: column
+      align-items: center
+      margin-bottom: 20px
+
   &__item
     margin-right: 60px
 
     &:last-child
       margin-right: 0
+
+    +max-w($tablet)
+      margin-right: 25px
+
+    +max-w($mobile_lg)
+      margin-right: 15px
+
+    +max-w($mobile_md)
+      margin: 0
 
   &__link
     display: block
@@ -50,6 +101,12 @@
     &:hover,
     &:focus
       color: #ff2d2d
+
+    +max-w($tablet)
+      font-size: 18px
+
+    +max-w($mobile_lg)
+      font-size: 16px
 
   &__images
     display: flex
@@ -80,6 +137,14 @@
     &:focus
       &::after
         opacity: 1
+
+    +max-w($tablet)
+      flex-basis: 45%
+      padding-top: 40%
+
+    +max-w(360)
+      flex-basis: 100%
+      padding-top: 70%
 
   &__img
     position: absolute

@@ -5,6 +5,16 @@
     padding: 100px 0 57px
     border-bottom: 2px solid #ececec
 
+    +max-w(1250)
+      padding: 100px 20px 57px
+
+    +max-w($laptop_sm)
+      flex-direction: column
+      align-items: center
+
+    +max-w($tablet)
+      padding: 60px 20px 30px
+
   &__title
     margin-bottom: 31px
     font-family: $font-family-bold
@@ -13,15 +23,49 @@
     font-weight: $font-weight-bold
     text-transform: uppercase
 
+    +max-w($laptop_sm)
+      text-align: center
+
+    +max-w($tablet)
+      font-size: 34px
+      line-height: 30px
+      margin-bottom: 20px
+
+    +max-w($mobile_lg)
+      font-size: 30px
+
+    +max-w($mobile_md)
+      font-size: 26px
+
+
   &__left,
   &__right
-    width: 50%
+    flex-shrink: 0
+    flex-grow: 1
+    max-width: 50%
+
+  &__left
+    +max-w($laptop_sm)
+      max-width: 100%
+      margin-bottom: 60px
+
+    +max-w($tablet)
+      margin-bottom: 40px
 
   &__text
-    width: 515px
+    max-width: 515px
     margin-bottom: 51px
     font-size: 16px
     line-height: 28px
+
+    +max-w($laptop_sm)
+      margin: 0 auto 51px
+      text-align: center
+
+    +max-w($tablet)
+      margin: 0 auto 25px
+      font-size: 14px
+      line-height: 24px
 
   &__right
     display: flex
@@ -29,10 +73,22 @@
     flex-wrap: wrap
     padding-left: 16px
 
+    +max-w($laptop_sm)
+      max-width: 580px
+      padding-left: 0
 
   &__item
-    width: 286px
+    max-width: 270px
     margin-bottom: 44px
+
+    +max-w($laptop_sm)
+      text-align: center
+
+    +max-w($tablet)
+      margin-bottom: 25px
+
+    +max-w($mobile_md)
+      max-width: 100%
 
   &__subtitle
     margin-bottom: 7px
@@ -40,13 +96,23 @@
     font-family: $font-family-semibold
     text-transform: capitalize
 
+    +max-w($tablet)
+      font-size: 20px
+
   &__description
     color: #737373
     font-size: 16px
     line-height:  28px
 
+    +max-w($tablet)
+      font-size: 14px
+      line-height: 24px
+
   &__img
     margin-bottom: 28px
+
+    +max-w($tablet)
+      margin-bottom: 10px
 
   &__button
     display: block
@@ -67,3 +133,12 @@
       color: #ff2d2d
       background-color: #ffffff
       border-color: #ff2d2d
+
+    +max-w($laptop_sm)
+      margin: 0 auto
+
+    +max-w($mobile_sm)
+      width: 100%
+      padding: 10px 0
+      border-radius: 5px
+      font-size: 15px
