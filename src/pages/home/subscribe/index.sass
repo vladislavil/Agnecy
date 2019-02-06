@@ -4,6 +4,18 @@
   background-color: #f5f0dd
   height: 512px
 
+  +max-w(1250)
+    padding: 0 20px
+
+  +max-w($tablet)
+    height: 400px
+
+  +max-w($mobile_lg)
+    height: 300px
+
+  +max-w($mobile_sm)
+    height: 400px
+
   &__title
     margin-bottom: 20px
     color: #ffffff
@@ -12,15 +24,32 @@
     text-align: center
     letter-spacing:  1px
 
+    +max-w($tablet)
+      font-size: 34px
+      line-height: 30px
+      margin-bottom: 20px
+
+    +max-w($mobile_lg)
+      font-size: 30px
+
+    +max-w($mobile_md)
+      font-size: 26px
+
   &__subtitle
     margin-bottom: 55px
     color: #ffffff
     font-size: 16px
     text-align: center
 
+    +max-w($tablet)
+      margin-bottom: 30px
+
   &__form
     display: flex
     justify-content: center
+
+    +max-w($mobile_sm)
+      flex-direction: column
 
   &__input
     flex-grow: 1
@@ -37,6 +66,19 @@
     &::placeholder
       color: #8c8c8c
       font-size: 16px
+
+      +max-w($mobile_lg)
+        font-size: 15px
+
+    +max-w($mobile_lg)
+      padding: 16px 25px
+      font-size: 15px
+
+    +max-w($mobile_sm)
+      max-width: 100%
+      margin-right: 0
+      margin-bottom: 30px
+      border-radius: 5px
 
   &__button
     flex-shrink: 0
@@ -58,5 +100,15 @@
       color: #ff2d2d
       background-color: #ffffff
       border-color: #ff2d2d
+
+    +max-w($mobile_lg)
+      height: 50px
+      font-size: 16px
+
+    +max-w($mobile_sm)
+      max-width: 100%
+      border-radius: 5px
+      font-size: 15px
+
 
 
