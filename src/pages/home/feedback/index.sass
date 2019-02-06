@@ -1,7 +1,28 @@
 .feedback
   position: relative
   display: flex
-  height: 1020px
+  flex-wrap: wrap
+  margin-bottom: 110px
+
+  +max-w(1250)
+    padding: 0 20px
+
+  .container
+    width: 1250px
+
+  &__header
+    padding-top: 69px
+    margin-bottom: 67px
+
+    +max-w($tablet)
+      margin-bottom: 30px
+
+    +max-w($laptop_sm)
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+      margin-bottom: 0
 
   &__title
     margin-bottom: 31px
@@ -9,31 +30,67 @@
     font-weight: $font-weight-bold
     text-transform: uppercase
 
+    +max-w($tablet)
+      font-size: 34px
+      line-height: 30px
+      margin-bottom: 20px
+
+    +max-w($mobile_lg)
+      font-size: 30px
+
+    +max-w($mobile_md)
+      font-size: 26px
+
   &__text
     max-width: 740px
     color: #737373
     position: relative
-    margin-bottom: 77px
     padding-bottom: 62px
     font-size: 16px
+    line-height: 28px
 
-    &::before
-      content: ""
+    &::after
+      content: url(line.png)
       position: absolute
-      bottom: 0
+      top: 0
       left: 0
-      height: 2px
-      width: 130px
-      background-color: #ff3b3b
+      height: 100%
+      width: 100%
+      display: flex
+      justify-content: left
+      align-items: flex-end
+
+      +max-w($laptop_sm)
+        justify-content: center
+
+    +max-w($tablet)
+      font-size: 14px
+      line-height: 24px
+      padding-bottom: 30px
 
   &__left
-    width: 58.7%
+    width: 64.879%
+
+    +max-w($laptop_sm)
+      width: 100%
+      height: 541px
+      margin-bottom: 50px
+
+    +max-w($mobile_sm)
+      height: 630px
+      margin-bottom: 0
 
   &__right
     z-index: 1
-    width: 41.3%
-    padding-top: 400px
-    padding-left: 92px
+    width: 35.121%
+
+    +max-w($laptop_sm)
+      width: 100%
+      display: flex
+      justify-content: center
+
+  &__form
+    max-width: 100%
 
   &__input
     padding: 21px 55px
@@ -42,25 +99,34 @@
     font-size: 18px
     border: none
     border-radius: 10px
-    flex-grow: 1
-    flex-shrink: 0
     outline: none
-    width: 46.5%
+    width: 45.913%
 
-    &:first-child
-      margin-right: 50px
+    +max-w($mobile_sm)
+      width: 100%
+      font-size: 15px
+      padding: 18px 30px
+      border-radius: 5px
+
+      &:first-child
+        margin-bottom: 30px
 
     &::placeholder
       font-family: $font-family-base
       font-size: 18px
 
+      +max-w($mobile_sm)
+        font-size: 15px
+
   &__part
     margin-bottom: 48px
-
-  &__part--inline
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     width: 734px
+
+    +max-w($mobile_lg)
+      width: 100%
 
   &__part--margin
     margin-bottom: 38px
@@ -80,6 +146,17 @@
     &::placeholder
       font-family: $font-family-base
       font-size: 18px
+
+      +max-w($mobile_sm)
+        font-size: 15px
+
+    +max-w($mobile_lg)
+      width: 100%
+
+    +max-w($mobile_sm)
+      padding: 25px 30px
+      font-size: 15px
+      border-radius: 5px
 
   &__button
     width: 734px
@@ -102,9 +179,17 @@
       background-color: #ffffff
       border-color: #ff2d2d
 
+    +max-w($mobile_lg)
+      width: 100%
+      font-size: 15px
+
+    +max-w($mobile_sm)
+      height: 55px
+      border-radius: 5px
+
   &__content
-    padding-top: 69px
-    padding-bottom: 110px
+    padding-top: 376px
+    //padding-bottom: 110px
     position: absolute
     top: 0
     left: 0
@@ -113,17 +198,42 @@
     height: 100%
     margin: 0 auto
 
+    +max-w(1250)
+      padding: 376px 20px 0
+
+    +max-w($tablet)
+      padding-top: 257px
+
+    +max-w($mobile_sm)
+      padding-top: 320px
+
   &__wrapper
     z-index: -1
-    display: flex
-    align-items: center
     height: 100%
 
+    +max-w($laptop_sm)
+      height: auto
+      display: flex
+      justify-content: center
+
   &__contacts
-    height: 480px
+    height: 479px
     background-color: #2d2d2d
     padding-top: 137px
     padding-left: 80px
+
+    +max-w($laptop_sm)
+      padding-left: 0
+      display: flex
+      justify-content: center
+      width: 460px
+
+    +max-w($mobile_lg)
+      height: 350px
+      padding-top: 50px
+
+    +max-w($mobile_sm)
+      width: 100%
 
   &__subtitle
     color: #e0e0e0
@@ -132,12 +242,23 @@
     font-size: 18px
     text-transform: uppercase
 
+    +max-w($mobile_sm)
+      text-align: center
+
   &__contact
     color: #e0e0e0
-    max-width: 300px
+    max-width: 285px
     font-size: 16px
     line-height: 28px
     margin-bottom: 17px
+
+    +max-w($mobile_sm)
+      max-width: 100%
+      text-align: center
+
+  &__inner
+    +max-w($mobile_lg)
+      max-width: 100%
 
 
 
