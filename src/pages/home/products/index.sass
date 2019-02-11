@@ -67,15 +67,6 @@
     justify-content: center
     margin-bottom: 60px
 
-    .show
-      display: block
-
-    .hide
-      display: none
-
-    .active
-      border-color: red
-
     +max-w($tablet)
       margin-bottom: 30px
 
@@ -92,6 +83,9 @@
     cursor: pointer
     text-transform: uppercase
     transition: color 0.3s
+
+    &.active
+      color: red
 
     &:hover,
     &:focus
@@ -160,6 +154,16 @@
     transform: translate(-50%, -50%)
     max-width: 60%
     max-height: 60%
+
+  &__tab
+
+    &.show
+      display: block
+
+    &.hide
+      display: none
+
+
 
 
 
