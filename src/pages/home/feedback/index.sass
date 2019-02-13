@@ -142,6 +142,7 @@
     resize: none
     border: none
     border-radius: 10px
+    overflow: auto
 
     &::placeholder
       font-family: $font-family-base
@@ -194,12 +195,14 @@
     top: 0
     left: 0
     right: 0
-    max-width: 1250px
+    width: 1250px
+    //max-width: 1250px
     height: 100%
     margin: 0 auto
 
     +max-w(1250)
       padding: 376px 20px 0
+      width: auto
 
     +max-w($tablet)
       padding-top: 257px
@@ -217,7 +220,7 @@
       justify-content: center
 
   &__contacts
-    height: 479px
+    height: 474px
     background-color: #2d2d2d
     padding-top: 137px
     padding-left: 80px
