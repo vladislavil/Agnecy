@@ -44,8 +44,8 @@ export default () => {
     gallery: {
       enabled: false,
       navigateByImgClick: false,
+      overflowY: hidden,
       preload: [0,1]
     }
   });
-
 }
