@@ -1,3 +1,5 @@
+include /blocks/tabs/tab.pug
+
 .products
   .container
     .products__content
@@ -11,55 +13,41 @@
         li.products__item user interface
         li.products__item mock-up
 
-      .products__tab.show
-        .products__images
-          .products__product
-            img(src="images/1.png").products__img
-          .products__product
-            img(src="images/2.png").products__img
-          .products__product
-            img(src="images/3.png").products__img
-          .products__product
-            img(src="images/4.png").products__img
-          .products__product
-            img(src="images/5.png").products__img
-          .products__product
-            img(src="images/6.png").products__img
-          .products__product
-            img(src="images/7.png").products__img
-          .products__product
-            img(src="images/8.png").products__img
+      -
+       var product = [
+       {
+         image1: 'images/1.png',
+         image2: 'images/2.png',
+         image3: 'images/3.png',
+         image4: 'images/4.png',
+         image5: 'images/5.png',
+         image6: 'images/6.png',
+         image7: 'images/7.png',
+         image8: 'images/8.png'
+       },
+       {
+         image1: 'images/1.png',
+         image2: 'images/2.png',
+         image3: 'images/3.png'
+       },
+       {
+         image4: 'images/4.png',
+         image5: 'images/5.png',
+         image6: 'images/6.png',
+         image7: 'images/7.png'
+       },
+       {
+         image5: 'images/5.png',
+         image2: 'images/2.png',
+         image7: 'images/7.png'
+       },
+       {
+         image3: 'images/3.png',
+         image4: 'images/4.png',
+         image8: 'images/8.png'
+       }
+       ]
 
-      .products__tab.hide
-        .products__images
-          .products__product
-            img(src="images/1.png").products__img
-          .products__product
-            img(src="images/2.png").products__img
-          .products__product
-            img(src="images/3.png").products__img
-
-      .products__tab.hide
-        .products__images
-          .products__product
-            img(src="images/1.png").products__img
-          .products__product
-            img(src="images/2.png").products__img
-          .products__product
-            img(src="images/3.png").products__img
-          .products__product
-            img(src="images/4.png").products__img
-
-      .products__tab.hide
-        .products__images
-          .products__product
-            img(src="images/4.png").products__img
-          .products__product
-            img(src="images/5.png").products__img
-          .products__product
-            img(src="images/6.png").products__img
-
-      .products__tab.hide
-        .products__images
-          .products__product
-            img(src="images/1.png").products__img
+      each oneproduct in product
+       .products__tab
+         +tab(oneproduct)
