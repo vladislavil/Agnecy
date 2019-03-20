@@ -1,7 +1,7 @@
-import './index.sass'
-import  'blocks/tabs/index.sass'
-import 'magnific-popup/dist/jquery.magnific-popup.min.js'
-import 'magnific-popup/dist/magnific-popup.css'
+import './index.sass';
+import  'blocks/tabs/index.sass';
+import 'magnific-popup/dist/jquery.magnific-popup.min.js';
+import 'magnific-popup/dist/magnific-popup.css';
 
 export default () => {
   var AllTabs = $(".products__menu .products__item");
@@ -10,9 +10,9 @@ export default () => {
 
   tabContent.each(function (index, elem) {
     if(index == 0)
-      $(elem).addClass("show");
+      $(elem).show();
     else {
-      $(elem).addClass("hide");
+      $(elem).hide();
     }
   });
 
@@ -23,8 +23,7 @@ export default () => {
         if ($target == $AllTabs[i]) {
           $(AllTabs[i]).addClass('active');
           $(tabContent[i]).show(1000);
-        }
-        else {
+        }        else {
           $($AllTabs[i]).removeClass('active');
           $(tabContent[i]).hide(1000);
         }
