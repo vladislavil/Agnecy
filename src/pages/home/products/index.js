@@ -21,16 +21,12 @@ export default () => {
     if ($target.className == 'products__item') {
       for (var i = 0; i < $AllTabs.length; i++) {
         if ($target == $AllTabs[i]) {
-          $(tabContent[i]).addClass('show');
           $(AllTabs[i]).addClass('active');
-          $(tabContent[i]).removeClass('hide');
-          $(tabContent[i]).animate({opacity: 1}, 500);
+          $(tabContent[i]).show(1000);
         }
         else {
-          $(tabContent[i]).addClass('hide');
-          $(tabContent[i]).removeClass('show');
           $($AllTabs[i]).removeClass('active');
-          $(tabContent[i]).css('opacity', 0);
+          $(tabContent[i]).hide(1000);
         }
       }
     }
