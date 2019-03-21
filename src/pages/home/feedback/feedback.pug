@@ -17,14 +17,14 @@
         form.feedback__form
           .feedback__part
             .feedback__part-wrapper
-              input(type="text").feedback__input
+              input(type="text" name="name").feedback__input
               label.feedback__label Name
             .feedback__part-wrapper
-              input(type="email").feedback__input
+              input(type="email" name="email").feedback__input
               label.feedback__label You Mail
           .feedback__part.feedback__part--margin
-              textarea(placeholder="Type your message").feedback__textarea
-          button(onclick="return false").feedback__button send message
+              textarea(placeholder="Type your message" name="comment").feedback__textarea
+          button(onclick="return false" name="send").feedback__button send message
 
 
 
