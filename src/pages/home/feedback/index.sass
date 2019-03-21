@@ -73,7 +73,7 @@
 
     +max-w($laptop_sm)
       width: 100%
-      height: 541px
+      height: 610px
       margin-bottom: 50px
 
     +max-w($mobile_sm)
@@ -97,19 +97,16 @@
     background-color: #e5e5e5
     font-family: $font-family-base
     font-size: 18px
+    width: 100%
     border: none
     border-radius: 10px
     outline: none
-    width: 45.913%
 
     +max-w($mobile_sm)
       width: 100%
       font-size: 15px
-      padding: 18px 30px
+      padding: 18px 25px
       border-radius: 5px
-
-      &:first-child
-        margin-bottom: 30px
 
     &::placeholder
       font-family: $font-family-base
@@ -173,6 +170,7 @@
     transition: color 0.3s, background-color 0.3s, border-color 0.3s
     letter-spacing: 1px
     cursor: pointer
+    outline: none
 
     &:hover,
     &:focus
@@ -190,13 +188,11 @@
 
   &__content
     padding-top: 376px
-    //padding-bottom: 110px
     position: absolute
     top: 0
     left: 0
     right: 0
     width: 1250px
-    //max-width: 1250px
     height: 100%
     margin: 0 auto
 
@@ -266,6 +262,37 @@
 .feedback__inner-contacts
   a
     display: block
+
+.feedback__part-wrapper
+  position: relative
+  width: 47.685%
+
+  +max-w($mobile_lg)
+    width: 100%
+
+  &:first-child
+    +max-w($mobile_lg)
+      margin-bottom: 30px
+
+.feedback__label
+  position: absolute
+  top: 50%
+  left: 55px
+  transform: translate(0, -50%)
+  font-family: "OpenSans", sans-serif
+  font-size: 18px
+  pointer-events: none
+  transition: 0.3s
+
+  +max-w($mobile_sm)
+    left: 25px
+
+.feedback__input:focus + .feedback__label,
+.feedback__input.is-not-empty + .feedback__label
+  top: 15px
+  font-size: 13px
+  opacity: 0.5
+
 
 
 

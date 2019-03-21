@@ -1,25 +1,30 @@
-import Vue from 'vue';
-import AppVue from './App.vue';
-import AppReact from './App.jsx';
-
 import './index.sass';
 import './index.pug';
 import './services'
 import initProducts from './products'
 import './team'
 import './subscribe'
-import './feedback'
+import initFeedback from './feedback'
 
-import './test-scss.scss';
 export default function () {
 
   initProducts();
-  console.log(tmpPug());
+  initFeedback();
 
-  new Vue({
-    el: '#test-vue',
-    render: createElem => createElem(AppVue),
+  $(function () {
+    var $scrollTop = $('.main__scrollTop');
+
+    $(window).scroll(function () {
+      if($(window).scrollTop() !== 0) {
+        $scrollTop.fadeIn(1000);
+      }
+      else{
+        $scrollTop.fadeOut(500);
+      }
+    });
+
+    $scrollTop.on('click', function () {
+      $('body,html').animate({scrollTop: 0}, 800);
+    });
   });
-
-  AppReact();
 };
