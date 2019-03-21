@@ -145,15 +145,31 @@
       margin-right: 10px
 
   &__link
+    position: relative
     display: block
     font-family: $font-family-italic
     font-size: 18px
     text-transform: capitalize
     transition: color 0.3s
 
+    &::before
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 0
+      height: 1px
+      background-color: transparent
+      transition: background-color 0.3s, width 0.3s
+
     &:hover,
     &:focus
       color: #ff2d2d
+
+      &::before
+        width: 100%
+        background-color: #ff2d2d
+
 
     +max-w($mobile_lg)
       font-size: 16px
